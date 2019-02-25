@@ -10,12 +10,11 @@
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
                 @if (Auth::check())
+                    <li class="nav-item"><a href="#" class="nav-link">Unused...</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Using!</a></li>
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-right">
-                            <li class="dropdown-item"><a href="#">Unused...</a></li>
-                            <li class="dropdown-item"><a href="#">Using!</a></li>
-                            <li class="dropdown-divider"></li>
                             <li class="dropdown-item">{!! link_to_route('logout.get', 'Signout') !!}</li>
                         </ul>
                     </li>
